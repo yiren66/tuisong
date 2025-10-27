@@ -1,5 +1,7 @@
 import random
 from time import localtime
+import json
+import requests
 from requests import get, post
 from datetime import datetime, date
 from zhdate import ZhDate
@@ -113,8 +115,17 @@ def get_ciba():
     note_en = r.json()["content"]
     note_ch = r.json()["note"]
     return note_ch, note_en
- 
- 
+
+
+def get_daily_love():
+    # 每日一句情话
+    url = "https://api.lovelive.tools/api/SweetNothings/Serialization/Json"
+    r = requests.get(url)
+    all_dict = json.loads(r.text)
+    sentence = all_dict['returnObj'][0]
+    daily_love = sentence
+    return daily_love
+
 def send_message(to_user, access_token, region_name, weather, temp, wind_dir, note_ch, note_en):
     url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={}".format(access_token)
     week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
@@ -172,6 +183,9 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
             "note_ch": {
                 "value": note_ch,
                 "color": get_color()
+            },
+                "today_note": {
+                    "value": get_daily_love()
             }
         }
     }
