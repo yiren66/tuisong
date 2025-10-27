@@ -5,9 +5,9 @@
 # 公众号appSecret
 "app_secret": "248ed35c15f04702bb3ac1853134401f",
 # 模板消息id
-"template_id": "VMur2t-nHyTIftlPPXwRBWRB0njCcDl-8GhfnvIn3t4",
+"template_id": "	HBPgV-9S8S4e7gGTRJVoeUqSPsMIhspuoeeY2zJNsf4",
 # 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
-"user": ["o71WZ6lAC1IQpSp0dBk7VFHRKqoc","o71WZ6k2wSvAY7p2pTywEGDtE8sE"],
+"user": ["o71WZ6lAC1IQpSp0dBk7VFHRKqoc","1o71WZ6k2wSvAY7p2pTywEGDtE8sE"],
  
 # 信息配置
 # 和风天气apikey
@@ -15,13 +15,14 @@
 # 所在地区，可为省，城市，区，县，同时支持国外城市，例如伦敦
 "region": "兰考",
 # 生日1，修改名字为对应需要显示的名字，如果生日为农历，在最前面加上r即可
-"birthday1": {"name": "常宝贝", "birthday": "2006-07-06"},
+"birthday1": {"name": "学弟", "birthday": "2006-07-06"},
 # 生日2
-"birthday2": {"name": "龙宝贝", "birthday": "2006-01-20"},
+"birthday2": {"name": "学姐", "birthday": "2006-01-20"},
 # 在一起的日子，格式同上，暂不不支持农历
-"love_date": "2025-01-05",
+"love_date": "2025-10-21",
 # 金句中文，如果设置了，则会显示这里的，如果为空，默认会读取金山的每日金句
 "note_ch": "",
 # 金句英文
 "note_en": "多喝热水嘻嘻嘻~~~~"
 }
+
